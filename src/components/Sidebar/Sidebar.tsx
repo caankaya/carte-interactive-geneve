@@ -88,7 +88,7 @@ function Sidebar() {
             </h1>
           </div>
           {/* Tiret */}
-          <div className="bg-black w-full h-[2px] my-5"></div>
+          <div className="bg-black w-full h-[2px] my-2"></div>
           {/* Acceuil */}
           <div className="collapse bg-transparent">
             <a
@@ -116,15 +116,15 @@ function Sidebar() {
             </button>
           </div>
           {/* Tiret */}
-          <div className="bg-black w-full h-[2px] my-5"></div>
+          <div className="bg-black w-full h-[2px] my-2"></div>
           {/* Themes */}
           <div className="collapse bg-transparent">
             <input
               type="radio"
               name="my-accordion-1"
+              className="cursor-pointer"
               checked={isOpen1}
-              onChange={toggleMenu1}
-              className=""
+              onClick={toggleMenu1}
             />
             <div
               className={`collapse-title text-base font-semibold normal-cas ${
@@ -140,11 +140,7 @@ function Sidebar() {
               }`}
             >
               {themes.map((e, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="mb-2 p-2 rounded-box hover:bg-yellow-400"
-                >
+                <a key={index} href="#" className="mb-2 p-2 rounded-box">
                   {e}
                 </a>
               ))}
@@ -155,14 +151,14 @@ function Sidebar() {
             <input
               type="radio"
               name="my-accordion-3"
+              className="cursor-pointer"
               checked={isOpen3}
-              onChange={toggleMenu3}
+              onClick={toggleMenu3}
             />
             <div
               className={`collapse-title text-base font-semibold normal-case hover:bg-yellow-400 hover:text-black rounded-box ${
                 isOpen2 && 'mb-28'
               }`}
-              onClick={toggleMenu3}
             >
               Faits historiques
               <FontAwesomeIcon icon={faBook} style={{ marginLeft: '1rem' }} />
@@ -184,18 +180,18 @@ function Sidebar() {
             </div>
           </div>
           {/* Personnages */}
-          <div className={`collapse bg-transparent`}>
+          <div className="collapse bg-transparent">
             <input
               type="radio"
               name="my-accordion-2"
+              className="cursor-pointer"
               checked={isOpen2}
-              onChange={toggleMenu2}
+              onClick={toggleMenu2}
             />
             <div
               className={
                 'collapse-title text-base font-semibold normal-case hover:text-black rounded-box'
               }
-              onClick={toggleMenu2}
             >
               Personnages historiques
               <FontAwesomeIcon
@@ -210,11 +206,7 @@ function Sidebar() {
               }`}
             >
               {personnes.map((e, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="mb-2 p-2 rounded-box hover:bg-yellow-400"
-                >
+                <a key={index} href="#" className="mb-2 p-2 rounded-box">
                   {e}
                 </a>
               ))}
