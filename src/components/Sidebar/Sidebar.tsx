@@ -18,6 +18,7 @@ import { themes } from '../../data/themes';
 import { eventHistorial } from '../../data/event';
 import { personnes } from '../../data/personnes';
 import About from '../Modal/About';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
   const dispatch = useAppDispatch();
@@ -94,18 +95,18 @@ function Sidebar() {
             </h1>
           </div>
           {/* Tiret */}
-          <div className="bg-black w-full h-[2px] my-2"></div>
+          <div className="bg-[#cd3030] w-full h-[2px] my-2"></div>
           {/* Acceuil */}
           <div className="collapse bg-transparent">
-            <a
+            <Link
               className={`collapse-title text-base font-semibold ${
                 isOpen2 && 'mb-28'
               }`}
-              href="/"
+              to="/"
             >
               Accueil
               <FontAwesomeIcon icon={faHouse} style={{ marginLeft: '1rem' }} />
-            </a>
+            </Link>
           </div>
           {/* A propos */}
           <div className="collapse bg-transparent">
@@ -125,9 +126,9 @@ function Sidebar() {
             </button>
           </div>
           {/* Tiret */}
-          <div className="bg-black w-full h-[2px] my-2"></div>
+          <div className="bg-[#cd3030] w-full h-[2px] my-2"></div>
           {/* Themes */}
-          <div className="collapse bg-transparent">
+          <div className="collapse collapse-arrow bg-transparent">
             <input
               type="radio"
               name="my-accordion-1"
@@ -156,7 +157,7 @@ function Sidebar() {
             </div>
           </div>
           {/* Faits */}
-          <div className="collapse bg-transparent">
+          <div className="collapse collapse-arrow bg-transparent">
             <input
               type="radio"
               name="my-accordion-3"
@@ -178,18 +179,14 @@ function Sidebar() {
               }`}
             >
               {eventHistorial.map((e, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="mb-2 p-2 rounded-box hover:bg-yellow-400"
-                >
+                <a key={index} href="#" className="mb-2 p-2 rounded-box">
                   {e}
                 </a>
               ))}
             </div>
           </div>
           {/* Personnages */}
-          <div className="collapse bg-transparent">
+          <div className="collapse collapse-arrow bg-transparent">
             <input
               type="radio"
               name="my-accordion-2"

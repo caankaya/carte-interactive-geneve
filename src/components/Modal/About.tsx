@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useAppDispatch } from '../../redux/hooks';
 import { openAboutModal } from '../../redux/reducers/interaction';
 
@@ -25,26 +26,26 @@ function About({ sidebar, isOpen }: IAbout) {
           <p className="py-4">
             Depuis novembre 2020, la Ville mène un processus de réflexion sur la
             question des
-            <a
-              href="https://www.geneve.ch/fr/themes/developpement-durable/municipalite/engagements-societe/egalite-diversite/diversite-culturelle/actions-sensibilisation/monuments-heritage-raciste-espace-public"
+            <Link
+              to="https://www.geneve.ch/fr/themes/developpement-durable/municipalite/engagements-societe/egalite-diversite/diversite-culturelle/actions-sensibilisation/monuments-heritage-raciste-espace-public"
               target="_blank"
               className="underline font-bold"
             >
               hommages rendus dans l’espace public
-            </a>{' '}
+            </Link>{' '}
             à des personnalités ayant encouragé le racisme et le colonialisme.
             Cette carte permet de visualiser les monuments et symboles présents
             en ville de Genève qui font référence à cette question.
           </p>
           <p className="py-4">
             Elle est principalement basée sur{' '}
-            <a
-              href="https://www.geneve.ch/fr/document/monuments-heritage-raciste-colonial-espace-public-etude-2022-ville-geneve"
+            <Link
+              to="https://www.geneve.ch/fr/document/monuments-heritage-raciste-colonial-espace-public-etude-2022-ville-geneve"
               target="_blank"
               className="underline font-bold"
             >
               l’étude
-            </a>
+            </Link>
             , commandée par la Ville et publiée en mars 2022, « Temps, espaces
             et histoires. Monuments et héritage raciste et colonial dans
             l’espace public genevois : état des lieux historique », des
@@ -54,13 +55,13 @@ function About({ sidebar, isOpen }: IAbout) {
           </p>
           <p className="py-4">
             Projet initié dans le cadre du{' '}
-            <a
-              href="https://opendata.ch/fr/evenements/glamhack2023/"
+            <Link
+              to="https://opendata.ch/fr/evenements/glamhack2023/"
               target="_blank"
               className="underline font-bold"
             >
               GLAMhack 2023
-            </a>
+            </Link>
             , la carte est amenée à évoluer au fil du temps. Elle est présentée
             pour la première fois lors de l’exposition temporaire du Musée
             d’ethnographie de Genève (MEG) « Mémoires. Genève dans le monde
