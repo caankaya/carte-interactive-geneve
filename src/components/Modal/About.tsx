@@ -15,7 +15,6 @@ function About({ sidebar, isOpen }: IAbout) {
 
   return (
     <div className="About">
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
       <dialog id="my_modal_1" className="modal" open={isOpen}>
         <div
           className={`modal-box w-11/12 max-w-5xl ${
@@ -25,7 +24,7 @@ function About({ sidebar, isOpen }: IAbout) {
           <h3 className="font-bold text-lg first-letter:uppercase">à propos</h3>
           <p className="py-4">
             Depuis novembre 2020, la Ville mène un processus de réflexion sur la
-            question des{' '}
+            question des
             <a
               href="https://www.geneve.ch/fr/themes/developpement-durable/municipalite/engagements-societe/egalite-diversite/diversite-culturelle/actions-sensibilisation/monuments-heritage-raciste-espace-public"
               target="_blank"
