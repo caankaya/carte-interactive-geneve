@@ -6,6 +6,9 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
+import App from './components/App/App';
+import Layout from './components/Layout/Layout';
+import store from './redux/store';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
