@@ -8,3 +8,34 @@
   box-shadow: none;
   border-radius: 1%;
 }
+
+/* Ajoutez ces règles CSS dans votre fichier CSS ou SCSS */
+@media screen and (max-width: 640px) {
+  .modal-box {
+    width: 90%; /* Ajustez la largeur pour les petits écrans */
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-box {
+    width: 80%; /* Ajustez la largeur pour les petits écrans */
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .modal-box {
+    width: 70%; /* Ajustez la largeur pour les écrans moyens */
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .modal-box {
+    width: 50%; /* Ajustez la largeur pour les grands écrans */
+    margin-left: auto;
+  }
+}
+
+/* Ajoutez d'autres médias queries selon vos besoins */

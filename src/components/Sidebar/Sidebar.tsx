@@ -1,5 +1,8 @@
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import { toggleSidebar } from '../../redux/reducers/interaction';
+import {
+  openAboutModal,
+  toggleSidebar,
+} from '../../redux/reducers/interaction';
 import logo from '/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -14,10 +17,12 @@ import { useState } from 'react';
 import { themes } from '../../data/themes';
 import { eventHistorial } from '../../data/event';
 import { personnes } from '../../data/personnes';
+import About from '../Modal/About';
 
 function Sidebar() {
   const dispatch = useAppDispatch();
   const sidebar = useAppSelector((state) => state.interaction.sidebar);
+  const modal = useAppSelector((state) => state.interaction.aboutModal);
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
@@ -41,13 +46,14 @@ function Sidebar() {
   }
 
   return (
-    <div className="Sidebar absolute z-[999] ">
-      {/* Menu burger */}
+    <div
+      className={`Sidebar absolute z-[999] ${sidebar ? 'lg:w-96' : 'w-full'}`}
+    >
       <button
         type="button"
         className={`lg:focus:outline-none absolute bg-white p-3 rounded-full mx-5 duration-1000 mt-5 ${
-          sidebar ? 'ml-[400px]' : ''
-        }`}
+          sidebar ? 'ml-[280px]' : ''
+        } ${sidebar ? 'lg:ml-[400px]' : ''}`}
         onClick={() => {
           dispatch(toggleSidebar(sidebar));
         }}
@@ -71,8 +77,8 @@ function Sidebar() {
       {/* Contenu de sidebar */}
       <aside
         id="default-sidebar"
-        className={`fixed top-0 left-0 w-96 h-screen transition-transform duration-[900ms] ${
-          sidebar ? `translate-x-0` : '-translate-x-full'
+        className={`fixed top-0 left-0 lg:w-96 w-64 h-screen transition-transform duration-[900ms] ${
+          sidebar ? 'lg:translate-x-0' : '-translate-x-full'
         } bg-white dark:bg-gray-800`}
         aria-label="Sidebar"
       >
@@ -107,6 +113,9 @@ function Sidebar() {
               className={`collapse-title text-left text-base font-semibold first-letter:uppercase  ${
                 isOpen2 && 'mb-28'
               }`}
+              onClick={() => {
+                dispatch(openAboutModal());
+              }}
             >
               À propos
               <FontAwesomeIcon
@@ -220,6 +229,7 @@ function Sidebar() {
           />
         </div>
       </aside>
+      <About sidebar={sidebar} isOpen={modal} />
     </div>
   );
 }
