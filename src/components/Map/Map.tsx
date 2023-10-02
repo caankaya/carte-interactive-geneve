@@ -15,8 +15,11 @@ function Map() {
         url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}"
       />
 
-      {Object.values(data).map((e) => (
-        <Marker position={[e.geolocalisation[0], e.geolocalisation[1]]}>
+      {Object.values(data).map((e, index) => (
+        <Marker
+          position={[e.geolocalisation[0], e.geolocalisation[1]]}
+          key={index}
+        >
           <Popup>
             <h5 className="popup-title text-xs font-bold tracking-widest mb-1 text-[#cd3030]">
               {e.figure}

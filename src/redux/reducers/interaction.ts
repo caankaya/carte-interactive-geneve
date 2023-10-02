@@ -5,6 +5,7 @@ interface InteractionState {
   menuBurger: boolean;
   sidebar: boolean;
   aboutModal: boolean;
+  themeId: number | null;
 }
 
 const initialState: InteractionState = {
@@ -12,12 +13,14 @@ const initialState: InteractionState = {
   menuBurger: false,
   sidebar: true,
   aboutModal: false,
+  themeId: null,
 };
 
 export const test = createAction<[]>('interaction/test');
 export const toggleMenuBurger = createAction('Menu burger toggled');
 export const toggleSidebar = createAction<boolean>('Sidebar toggled');
 export const openAboutModal = createAction('About modal toggled');
+export const getThemeId = createAction<number>('Getting the theme id');
 
 const interactionReducer = createReducer(initialState, (builder) => {
   builder
@@ -32,6 +35,9 @@ const interactionReducer = createReducer(initialState, (builder) => {
     })
     .addCase(openAboutModal, (state) => {
       state.aboutModal = !state.aboutModal;
+    })
+    .addCase(getThemeId, (state, action) => {
+      state.themeId = action.payload;
     });
 });
 

@@ -1,7 +1,8 @@
 export const data = {
   1: {
     id: 1,
-    figure: 'Rue De-Beaumont',
+    theme_id: 1,
+    figure: 'Colonisation',
     theme: 'Résistance',
     mots_clés: [
       'Congo colonial',
@@ -21,8 +22,9 @@ En 1860, la SGG fait paraître le premier volume de sa revue Le Globe, dont les 
   },
   2: {
     id: 2,
+    theme_id: 2,
     figure: 'Avenue Alfred-Bertrand',
-    theme: 'Colonisation',
+    theme: 'Esclavage',
     mots_clés: [
       'exploration coloniale',
       'idéologie de la « mission civilisatrice »',
@@ -40,8 +42,9 @@ En 1860, la SGG fait paraître le premier volume de sa revue Le Globe, dont les 
   },
   3: {
     id: 3,
+    theme_id: 3,
     figure: 'Parc Bertrand',
-    theme: 'Colonisation',
+    theme: 'Général',
     mots_clés: [
       'exploration coloniale',
       'idéologie de la « mission civilisatrice »',
@@ -59,8 +62,9 @@ En 1860, la SGG fait paraître le premier volume de sa revue Le Globe, dont les 
   },
   4: {
     id: 4,
+    theme_id: 4,
     figure: 'Espace de vie enfantine de Bertrand',
-    theme: 'Colonisation',
+    theme: 'Racisme / Discrimination / Préjugés',
     mots_clés: [
       'exploration coloniale',
       'idéologie de la « mission civilisatrice »',
@@ -78,8 +82,9 @@ En 1860, la SGG fait paraître le premier volume de sa revue Le Globe, dont les 
   },
   5: {
     id: 5,
+    theme_id: 5,
     figure: 'Rue Butini',
-    theme: 'Sciences',
+    theme: 'Résistance',
     mots_clés: [
       'abolitionnisme',
       'anti-esclavagisme',
@@ -98,8 +103,9 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   6: {
     id: 6,
+    theme_id: 6,
     figure: 'Rue Marguerite-Dellenbach',
-    theme: 'Esclavage',
+    theme: 'Sciences',
     mots_clés: [
       'anthropologie raciale',
       'ethnographie',
@@ -114,8 +120,9 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   7: {
     id: 7,
+    theme_id: 1,
     figure: 'Avenue Henri-Dunant',
-    theme: 'Esclavage',
+    theme: 'Colonisation',
     mots_clés: [
       'affairisme colonial',
       'Algérie coloniale',
@@ -135,6 +142,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   8: {
     id: 8,
+    theme_id: 2,
     figure: 'École de commerce Henry-Dunant',
     theme: 'Esclavage',
     mots_clés: [
@@ -156,8 +164,9 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   9: {
     id: 9,
+    theme_id: 3,
     figure: 'Buste d’Henry Dunant',
-    theme: 'Esclavage',
+    theme: 'Général',
     mots_clés: [
       'affairisme colonial',
       'Algérie coloniale',
@@ -177,6 +186,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   10: {
     id: 10,
+    theme_id: 4,
     figure: 'Avenue De-Gallatin',
     theme: 'Racisme / Discrimination / Pré-jugés',
     mots_clés: [
@@ -197,8 +207,9 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   11: {
     id: 11,
+    theme_id: 5,
     figure: 'Monument aux victimes de la fusillade du 9 novembre 1932',
-    theme: 'Esclavage',
+    theme: 'Resistance',
     mots_clés: ['antifascisme', 'antisémitisme', 'fascisme'],
     localisation: 'Quartier de Plainpalais Jonction, avenue du Mail 27-31',
     faits_historiques: `Le 9 novembre 1932, dans un contexte marqué par la dépression économique et la montée de l’extrême droite en Europe, Georges « Géo » Oltramare (1896-1960), militant genevois du fascisme et de l’antisémitisme, fondateur du journal Le Pilori et leader du parti de l’Union nationale (UN), organise à la Salle de Plainpalais à Genève une réunion de « mise en accusation » de militants de la gauche radicale genevoise : Léon Nicole (1887-1965) et Jacques Dicker (1879-1942). Ce dernier, avocat juif d’origine russe, est régulièrement victime des attaques verbales et médiatiques antisémites d’Oltramare et de ses partisans. Les affiches collées par l’UN dans les rues de la ville quelques jours avant la réunion du 9 novembre exhortent à « abattre l’immonde Nicoulaz et le juif Dicker ». En réaction, le Parti socialiste genevois (PSG) de Dicker et Nicole convoque une contre-manifestation. Pour maintenir l’ordre public et protéger la réunion de l’UN, les autorités genevoises font appel aux services de l’armée suisse, laquelle envoie une troupe de recrues. La contremanifestation réunit entre 5000 et 8000 personnes. Attroupées devant la Salle de Plainpalais, celles-ci écoutent le discours de Nicole. A 21h00, Frédéric Martin, alors président du Conseil d’État, décide de faire intervenir la troupe – intervention à laquelle certains manifestants réagissent en jetant du gravier aux soldats et en leur arrachant des fusils qu’ils/elles jettent à terre. Estimant que leurs hommes sont menacés, les commandants de la troupe ordonnent alors de tirer. La fusillade fera treize morts et des dizaines de blessés.`,
@@ -208,8 +219,9 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   12: {
     id: 12,
+    theme_id: 6,
     figure: 'Statue du Mahatma Gandhi',
-    theme: 'Resistance',
+    theme: 'Sciences',
     mots_clés: [
       'anticolonialisme',
       'antiracisme',
@@ -224,7 +236,8 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   13: {
     id: 13,
-    theme: 'Sciences',
+    theme_id: 1,
+    theme: 'Colonisation',
     figure: 'Chemin Hüber-Saladin',
     mots_clés: [
       'Algérie coloniale',
@@ -240,8 +253,9 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
   },
   14: {
     id: 14,
+    theme_id: 2,
     figure: 'Rue Lamartine',
-    theme: 'Général',
+    theme: 'Esclavage',
     mots_clés: [
       'abolition graduelle',
       'abolitionnisme',
