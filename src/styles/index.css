@@ -9,6 +9,13 @@
   border-radius: 1%;
 }
 
+.active {
+  font-weight: bold;
+}
+.pending {
+  font-weight: normal;
+}
+
 /* Ajoutez ces règles CSS dans votre fichier CSS ou SCSS */
 @media screen and (max-width: 640px) {
   .modal-box {

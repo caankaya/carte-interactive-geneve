@@ -1,9 +1,9 @@
-export const data = {
-  1: {
+export const data = [
+  {
     id: 1,
     theme_id: 1,
-    figure: 'Colonisation',
-    theme: 'Résistance',
+    figure: 'Rue-Alfred-Bertrand',
+    theme: 'Colonisation',
     mots_clés: [
       'Congo colonial',
       'géographie coloniale',
@@ -20,7 +20,7 @@ En 1860, la SGG fait paraître le premier volume de sa revue Le Globe, dont les 
     lieux_memoriel: `C’est en tant que membre du « panthéon des grandes familles » genevoises qu’est célébrée la famille Bouthillier de Beaumont à Genève, comme on le comprend dans la base de données en ligne des noms géographiques du canton de Genève. Cette dernière précise que si la rue De-Beaumont évoque le souvenir de la famille dans son ensemble, elle rend hommage plus particulièrement à quatre peintres issus de la famille : Gabriel (1811-1877), Jean-Louis-Auguste (1842-1899), Pauline (1846-1904) et Gustave (1851-1922). Il n’est pas fait mention d’Henri Bouthillier de Beaumont ni de son soutien à la conquête coloniale léopoldienne.`,
     geolocalisation: [46.19763331682022, 6.156080355027619],
   },
-  2: {
+  {
     id: 2,
     theme_id: 2,
     figure: 'Avenue Alfred-Bertrand',
@@ -40,7 +40,7 @@ En 1860, la SGG fait paraître le premier volume de sa revue Le Globe, dont les 
     lieux_memoriel: `Alfred Bertrand est célébré en la cité en tant que « bienfaiteur de Genève » et « donateur du parc portant son nom ». Dans sa notice consacrée au rentier genevois, la base de données en ligne des noms géographiques du canton de Genève fait mention de ses voyages au Cachemire, dans l’Himalaya et au Zambèze, de ses legs au Musée d’ethnographie de Genève et de son enthousiasme pour la cause missionnaire, sans point de vue critique. La proposition de motion « pour un inventaire des lieux géographiques portant des noms en lien avec le colonialisme, la traite négrière ou le racisme, et pour une meilleure information du public à ce propos », déposée le 12 juin 2020 au Secrétariat du Grand Conseil genevois, attire l’attention sur les hommages à Alfred Bertrand, en citant les propos racistes et coloniaux que renferme son récit de voyage.`,
     geolocalisation: [46.19342394610647, 6.15498072619111],
   },
-  3: {
+  {
     id: 3,
     theme_id: 3,
     figure: 'Parc Bertrand',
@@ -60,7 +60,7 @@ En 1860, la SGG fait paraître le premier volume de sa revue Le Globe, dont les 
     lieux_memoriel: `Alfred Bertrand est célébré en la cité en tant que « bienfaiteur de Genève » et « donateur du parc portant son nom ». Dans sa notice consacrée au rentier genevois, la base de données en ligne des noms géographiques du canton de Genève fait mention de ses voyages au Cachemire, dans l’Himalaya et au Zambèze, de ses legs au Musée d’ethnographie de Genève et de son enthousiasme pour la cause missionnaire, sans point de vue critique. La proposition de motion « pour un inventaire des lieux géographiques portant des noms en lien avec le colonialisme, la traite négrière ou le racisme, et pour une meilleure information du public à ce propos », déposée le 12 juin 2020 au Secrétariat du Grand Conseil genevois, attire l’attention sur les hommages à Alfred Bertrand, en citant les propos racistes et coloniaux que renferme son récit de voyage.`,
     geolocalisation: [46.19262430517997, 6.158886265536283],
   },
-  4: {
+  {
     id: 4,
     theme_id: 4,
     figure: 'Espace de vie enfantine de Bertrand',
@@ -80,7 +80,7 @@ En 1860, la SGG fait paraître le premier volume de sa revue Le Globe, dont les 
     lieux_memoriel: `Alfred Bertrand est célébré en la cité en tant que « bienfaiteur de Genève » et « donateur du parc portant son nom ». Dans sa notice consacrée au rentier genevois, la base de données en ligne des noms géographiques du canton de Genève fait mention de ses voyages au Cachemire, dans l’Himalaya et au Zambèze, de ses legs au Musée d’ethnographie de Genève et de son enthousiasme pour la cause missionnaire, sans point de vue critique. La proposition de motion « pour un inventaire des lieux géographiques portant des noms en lien avec le colonialisme, la traite négrière ou le racisme, et pour une meilleure information du public à ce propos », déposée le 12 juin 2020 au Secrétariat du Grand Conseil genevois, attire l’attention sur les hommages à Alfred Bertrand, en citant les propos racistes et coloniaux que renferme son récit de voyage.`,
     geolocalisation: [46.19440827939586, 6.15769475257695],
   },
-  5: {
+  {
     id: 5,
     theme_id: 5,
     figure: 'Rue Butini',
@@ -101,7 +101,7 @@ Une interpellation déposée par la politicienne Pia Hollstein (Les Verts) en ma
 L’association Cooperaxion, dont l’un des objectifs est de rendre visible l’histoire des Suisses ayant tiré profit du commerce triangulaire et de l’esclavage – par le biais notamment de visites guidées à Neuchâtel –, a consacré une notice à Ami Butini dans sa base de données des personnalités suisses impliquées dans le système esclavagiste.`,
     geolocalisation: [46.21579477508897, 6.149006368519514],
   },
-  6: {
+  {
     id: 6,
     theme_id: 6,
     figure: 'Rue Marguerite-Dellenbach',
@@ -118,7 +118,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
     lieux_memoriel: `L’hommage rendu à Marguerite Dellenbach dans l’espace public genevois est récent. Il provient de l’initiative de l’association L’Escouade, à l’origine du projet du 100Elles*. Ce dernier vise depuis 2019 à identifier « cent femmes*, remplissant les critères officiels pour obtenir une rue à leur nom » et à les « mettre en avant dans les rues de la ville » notamment en ajoutant des plaques de couleur rose en leur honneur en dessous des plaques préexistantes. En juin 2020, le Conseil d’État a approuvé le changement de noms de dix rues, donnant ainsi suite à une motion déposée en juin 2019 et intitulée « pour une reconnaissance dans l’espace public du rôle joué par les femmes dans l’histoire genevoise ». La rue Marguerite-Dellenbach a alors remplacé la rue Bergalonne, laquelle rendait auparavant hommage à François Bergalonne (1833-1907), violoniste et chef d’orchestre. La biographie de Marguerite Dellenbach publiée sur le site du projet 100Elles* fait état des préjugés ethnocentriques de la scientifique genevoise. Dans la base de données en ligne des noms géographiques du canton de Genève, où a été reprise la biographie susmentionnée, le passage exposant les biais ethnocentristes et racistes de Dellenbach n’a pas été retenu.`,
     geolocalisation: [46.19811484653819, 6.138316241417067],
   },
-  7: {
+  {
     id: 7,
     theme_id: 1,
     figure: 'Avenue Henri-Dunant',
@@ -140,7 +140,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
 `,
     geolocalisation: [46.19749974337317, 6.142212926074311],
   },
-  8: {
+  {
     id: 8,
     theme_id: 2,
     figure: 'École de commerce Henry-Dunant',
@@ -162,7 +162,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
 `,
     geolocalisation: [46.213080208913254, 6.11811914141775],
   },
-  9: {
+  {
     id: 9,
     theme_id: 3,
     figure: 'Buste d’Henry Dunant',
@@ -184,7 +184,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
 `,
     geolocalisation: [46.20170863313425, 6.144055383745823],
   },
-  10: {
+  {
     id: 10,
     theme_id: 4,
     figure: 'Avenue De-Gallatin',
@@ -205,7 +205,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
     lieux_memoriel: `C’est en tant que membre de l’ancienne bourgeoisie genevoise qu’est célébrée la famille Gallatin, comme on peut le constater en consultant la base de données en ligne des noms géographiques du canton de Genève. Parmi les membres illustres de la famille, cette dernière mentionne Albert de Gallatin. L’engagement d’Albert de Gallatin en faveur de l’abolition de l’esclavage et ses contributions à l’élaboration d’une ethnologie coloniale des Indiens d’Amérique, ainsi que le fait que Jean de Gallatin possédait des parts dans une plantation esclavagiste ne figurent pas dans la description de la notice consacrée aux Gallatin dans cette même base de données. La proposition de motion « pour un inventaire des lieux géographiques portant des noms en lien avec le colonialisme, la traite négrière ou le racisme, et pour une meilleure information du public à ce propos », déposée le 12 juin 2020 au Secrétariat du Grand Conseil genevois, note que « certains membres des familles Butini, De Gallatin possédaient […] des propriétés et des esclaves au Surinam ». Une interpellation déposée par la politicienne Pia Hollstein (Les Verts) en mars 2003 au Conseil national suisse, intitulée « Participation de la Suisse à l'esclavage et au commerce transatlantique des esclaves », fait mention de l’implication de Jean de Gallatin dans le système d’exploitation esclavagiste. Cette interpellation, qui demandait au Conseil fédéral d’envisager des réparations financières « au bénéfice de l’Afrique », a été rejetée par l’exécutif du gouvernement helvétique sur la base, notamment, de l’argument suivant : « La Suisse n’a jamais été une puissance coloniale et s’est ainsi différenciée fondamentalement de celles-ci au niveau du commerce étatique international. »`,
     geolocalisation: [46.2062442466721, 6.12416965491035],
   },
-  11: {
+  {
     id: 11,
     theme_id: 5,
     figure: 'Monument aux victimes de la fusillade du 9 novembre 1932',
@@ -217,7 +217,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
 `,
     geolocalisation: [46.19593341035618, 6.140703629078279],
   },
-  12: {
+  {
     id: 12,
     theme_id: 6,
     figure: 'Statue du Mahatma Gandhi',
@@ -234,7 +234,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
 `,
     geolocalisation: [46.225296553250494, 6.137362126075492],
   },
-  13: {
+  {
     id: 13,
     theme_id: 1,
     theme: 'Colonisation',
@@ -251,7 +251,7 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
     lieux_memoriel: `L’hommage rendu à Jean Hüber-Saladin repose, selon la base de données en ligne des noms géographiques du canton de Genève, sur son engagement en faveur de la « tolérance et de la liberté de pensée » dans le contexte des « luttes confessionnelles qui ravageaient le canton ». Sa mission en Algérie et son idée d’une immigration de colons suisses dans le territoire est mentionnée avec le commentaire qu’elle était « selon lui, le seul moyen de porter un secours efficace aux habitants pauvres de notre pays », sans référence à la vision coloniale, raciste et orientaliste sous-tendant cette idée.`,
     geolocalisation: [46.289870359763555, 6.165681581899768],
   },
-  14: {
+  {
     id: 14,
     theme_id: 2,
     figure: 'Rue Lamartine',
@@ -269,4 +269,4 @@ L’association Cooperaxion, dont l’un des objectifs est de rendre visible l�
 `,
     geolocalisation: [46.21049338932289, 6.128584110732094],
   },
-};
+];

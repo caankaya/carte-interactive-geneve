@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import logo from '/logo.png';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import {
@@ -6,7 +6,6 @@ import {
   openAboutModal,
   toggleSidebar,
 } from '../../redux/reducers/interaction';
-import { Link } from 'react-router-dom';
 import { themes } from '../../data/themes';
 import { eventHistorial } from '../../data/event';
 import { personnes } from '../../data/personnes';
@@ -19,25 +18,26 @@ function Sidebar2() {
   const [isThemeOpen, setIsThemeOpen] = useState(false);
   const [isEventHistorielOpen, setIsEventHistorielOpen] = useState(false);
   const [isPersonOpen, setIsPersonOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  const handleItemClick = (index: number | null) => {
+    setActiveIndex(index);
+  };
   const toggleThemes = () => {
     setIsThemeOpen(!isThemeOpen);
     setIsEventHistorielOpen(false);
     setIsPersonOpen(false);
   };
-
   const toggleEventHistoriel = () => {
     setIsEventHistorielOpen(!isEventHistorielOpen);
     setIsThemeOpen(false);
     setIsPersonOpen(false);
   };
-
   const togglePerson = () => {
     setIsPersonOpen(!isPersonOpen);
     setIsEventHistorielOpen(false);
     setIsThemeOpen(false);
   };
-
   const openModal = () => {
     dispatch(openAboutModal());
   };
@@ -51,7 +51,7 @@ function Sidebar2() {
       <button
         type="button"
         className={`lg:focus:outline-none absolute bg-white p-3 rounded-full mx-5 duration-1000 mt-5 ${
-          sidebar ? 'ml-[280px]' : ''
+          sidebar ? 'ml-[263px]' : ''
         } ${sidebar ? 'lg:ml-[400px]' : ''}`}
         onClick={() => {
           dispatch(toggleSidebar(sidebar));
@@ -78,12 +78,13 @@ function Sidebar2() {
           sidebar
             ? 'lg:translate-x-0 duration-1000'
             : '-translate-x-full duration-1000'
-        } bg-white dark:bg-gray-800`}
+        } bg-white`}
       >
+        {/* Titres */}
         <h1
           className={`collapse-title font-bold text-[#cd3030] text-2xl uppercase text-left mb-2`}
         >
-          la carte interactive
+          Héritages raciste de la ville de genève
         </h1>
         {/* Personnages Historiques */}
         <ul
@@ -98,6 +99,7 @@ function Sidebar2() {
             name="my-accordion-2"
             checked={isPersonOpen}
             onChange={togglePerson}
+            onClick={togglePerson}
           />
           <h2 className="collapse-title">Personnages historiques</h2>
           {isPersonOpen &&
@@ -120,6 +122,7 @@ function Sidebar2() {
             name="my-accordion-2"
             checked={isEventHistorielOpen}
             onChange={toggleEventHistoriel}
+            onClick={toggleEventHistoriel}
           />
           <h2 className="collapse-title">Faits historiques</h2>
           {isEventHistorielOpen && (
@@ -145,16 +148,20 @@ function Sidebar2() {
             name="my-accordion-2"
             checked={isThemeOpen}
             onChange={toggleThemes}
+            onClick={toggleThemes}
           />
           <h2 className="collapse-title">Thèmes</h2>
           {isThemeOpen && (
             <>
               {themes.map((theme, index) => (
                 <li
-                  className="m-2 pl-2 text-sm"
+                  className={`m-2 pl-2 text-sm ${
+                    activeIndex === index ? 'active' : ''
+                  }`}
                   key={index}
                   onClick={() => {
                     dispatch(getThemeId(theme.id));
+                    handleItemClick(index);
                   }}
                 >
                   <button>{theme.theme_name}</button>
@@ -166,7 +173,7 @@ function Sidebar2() {
         {/* Accueil */}
         <ul className="collapse">
           <h2 className="collapse-title">
-            <Link to={'/'}>Accueil</Link>
+            <a href={'/'}>Accueil</a>
           </h2>
         </ul>
         {/* About */}
