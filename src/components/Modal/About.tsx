@@ -17,15 +17,10 @@ function About({ sidebar, isOpen }: IAbout) {
   return (
     <div className="About">
       <dialog id="my_modal_1" className="modal" open={isOpen}>
-        <div
-          className={`modal-box w-11/12 max-w-5xl ${
-            sidebar ? 'ml-[400px]' : ''
-          }`}
-        >
+        <div className={`modal-box w-11/12 max-w-5xl ${sidebar ? 'ml-[400px]' : ''}`}>
           <h3 className="font-bold text-lg first-letter:uppercase">à propos</h3>
           <p className="py-4">
-            Depuis novembre 2020, la Ville mène un processus de réflexion sur la
-            question des
+            Depuis novembre 2020, la Ville mène un processus de réflexion sur la question des {''}
             <Link
               to="https://www.geneve.ch/fr/themes/developpement-durable/municipalite/engagements-societe/egalite-diversite/diversite-culturelle/actions-sensibilisation/monuments-heritage-raciste-espace-public"
               target="_blank"
@@ -33,9 +28,8 @@ function About({ sidebar, isOpen }: IAbout) {
             >
               hommages rendus dans l’espace public
             </Link>{' '}
-            à des personnalités ayant encouragé le racisme et le colonialisme.
-            Cette carte permet de visualiser les monuments et symboles présents
-            en ville de Genève qui font référence à cette question.
+            à des personnalités ayant encouragé le racisme et le colonialisme. Cette carte permet de visualiser les
+            monuments et symboles présents en ville de Genève qui font référence à cette question.
           </p>
           <p className="py-4">
             Elle est principalement basée sur{' '}
@@ -46,64 +40,46 @@ function About({ sidebar, isOpen }: IAbout) {
             >
               l’étude
             </Link>
-            , commandée par la Ville et publiée en mars 2022, « Temps, espaces
-            et histoires. Monuments et héritage raciste et colonial dans
-            l’espace public genevois : état des lieux historique », des
-            professeurs Mohamed Mahmoud Mohamedou et Davide Rodogno, de
-            l’Institut de hautes études internationales et du développement
+            , commandée par la Ville et publiée en mars 2022, « Temps, espaces et histoires. Monuments et héritage
+            raciste et colonial dans l’espace public genevois : état des lieux historique », des professeurs Mohamed
+            Mahmoud Mohamedou et Davide Rodogno, de l’Institut de hautes études internationales et du développement
             (IHEID).
           </p>
           <p className="py-4">
             Projet initié dans le cadre du{' '}
-            <Link
-              to="https://opendata.ch/fr/evenements/glamhack2023/"
-              target="_blank"
-              className="underline font-bold"
-            >
+            <Link to="https://opendata.ch/fr/evenements/glamhack2023/" target="_blank" className="underline font-bold">
               GLAMhack 2023
             </Link>
-            , la carte est amenée à évoluer au fil du temps. Elle est présentée
-            pour la première fois lors de l’exposition temporaire du Musée
-            d’ethnographie de Genève (MEG) « Mémoires. Genève dans le monde
-            colonial » (03.05.2024 - 05.01.2025).
+            , la carte est amenée à évoluer au fil du temps. Elle est présentée pour la première fois lors de
+            l’exposition temporaire du Musée d’ethnographie de Genève (MEG) « Mémoires. Genève dans le monde colonial »
+            (03.05.2024 - 05.01.2025).
           </p>
           <p className="font-bold mb-3">Crédits :</p>
           <p className="font-bold mb-3">Direction de projet</p>
           <p>Musée d’ethnographie de Genève (MEG), Ville de Genève</p>
-          <p className="mb-5">
-            Service Agenda 21 – Ville durable (A21), Ville de Genève
-          </p>
-          <p className="font-bold mb-3">
-            Participation dans le cadre du GlamHack 2023
-          </p>
+          <p className="mb-5">Service Agenda 21 – Ville durable (A21), Ville de Genève</p>
+          <p className="font-bold mb-3">Participation dans le cadre du GlamHack 2023</p>
           <ul>
             <li>
-              <span className="font-bold">Bertrand Cassegrain (A21) :</span>{' '}
-              porteur du challenge
+              <span className="font-bold">Bertrand Cassegrain (A21) :</span> porteur du challenge
             </li>
             <li>
-              <span className="font-bold">Felipe Covaleda :</span> conception de
-              la base de données
+              <span className="font-bold">Felipe Covaleda :</span> conception de la base de données
             </li>
             <li>
-              <span className="font-bold">Julie Dorner (MEG) :</span> porteuse
-              du challenge
+              <span className="font-bold">Julie Dorner (MEG) :</span> porteuse du challenge
             </li>
             <li>
-              <span className="font-bold">Ana Hug Buffo :</span> conception de
-              la base de données
+              <span className="font-bold">Ana Hug Buffo :</span> conception de la base de données
             </li>
             <li>
-              <span className="font-bold">Flor Méchain :</span> iconographie et
-              droits d’auteurs
+              <span className="font-bold">Flor Méchain :</span> iconographie et droits d’auteurs
             </li>
             <li>
-              <span className="font-bold">Iolanda Pensa :</span> contenu
-              wikidata et wikimedia commons
+              <span className="font-bold">Iolanda Pensa :</span> contenu wikidata et wikimedia commons
             </li>
             <li>
-              <span className="font-bold">Can Kaya :</span> développement de
-              l’interface utilisateur
+              <span className="font-bold">Can Kaya :</span> développement de l’interface utilisateur
             </li>
           </ul>
           <div className="modal-action">

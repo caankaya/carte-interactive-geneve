@@ -83,7 +83,7 @@ function Sidebar2() {
         {/* Personnages Historiques */}
         <ul
           className={`collapse collapse-arrow max-h-[100px] overflow-hidden rounded-none border-t-2
-           ${isPersonOpen ? 'max-h-screen transition-all duration-1000 ease-in-out' : 'max-h-0'}`}
+           ${isPersonOpen ? 'max-h-screen transition-all duration-500 ease-in-out' : 'max-h-0'}`}
         >
           <input
             type="radio"
