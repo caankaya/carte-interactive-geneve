@@ -3,6 +3,7 @@ import L from "leaflet";
 import { data } from "../../data";
 import { useAppSelector } from "../../redux/hooks";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Map() {
   const themeId = useAppSelector((state) => state.interaction.themeId);
@@ -15,12 +16,12 @@ function Map() {
         <Marker
           position={[e.geolocalisation[0], e.geolocalisation[1]]}
           key={index}
-          // icon={L.icon({
-          //   iconUrl: "/public/location-red.png",
-          //   iconSize: [50, 50],
-          //   iconAnchor: [10, 10],
-          //   popupAnchor: [0, 0],
-          // })}
+          icon={L.icon({
+            iconUrl: `/location-${e.color}.png`,
+            iconSize: [50, 50],
+            iconAnchor: [10, 10],
+            popupAnchor: [0, 0],
+          })}
         >
           <Popup>
             <h5 className="popup-title text-xs font-bold tracking-widest mb-1 text-[#cd3030]">
@@ -31,7 +32,7 @@ function Map() {
               {e.faits_historiques.substring(0, 500)}...
             </p>
             <button className="btn btn-sm normal-case block m-auto w-48 text-xs">
-              Lire la suite
+              <Link to={`/page/${e.id}`}>Lire la suite</Link>
             </button>
           </Popup>
         </Marker>
@@ -75,7 +76,9 @@ function Map() {
                   {e.faits_historiques.substring(0, 500)}...
                 </p>
                 <button className="btn btn-sm normal-case block m-auto w-48 text-xs">
-                  Lire la suite
+                  <Link to={`/page/${e.id}`} style={{ color: "black" }}>
+                    Lire la suite
+                  </Link>
                 </button>
               </Popup>
             </Marker>

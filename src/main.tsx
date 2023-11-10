@@ -9,6 +9,7 @@ import {
 import App from "./components/App/App";
 import Layout from "./components/Layout/Layout";
 import store from "./redux/store";
+import Detail from "./components/Detail/Detail";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
         <Route index element={<App />} />
         {/* Compléter le router avec d'autres pages à partir de là*/}
         {/* Oubliez pas d'ajouter Outlet dans le composant Layout*/}
+        <Route path="/page/:id" element={<Detail />} />
       </Route>
     </Route>
   )
