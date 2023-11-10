@@ -1,12 +1,12 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { data } from '../../data';
-import { useAppSelector } from '../../redux/hooks';
-import { useEffect, useState } from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import { data } from "../../data";
+import { useAppSelector } from "../../redux/hooks";
+import { useEffect, useState } from "react";
 
 function Map() {
   const themeId = useAppSelector((state) => state.interaction.themeId);
   const [filteredMarkers, setFilteredMarkers] = useState<JSX.Element[]>([]);
-  console.log('filteredMarkers :', filteredMarkers);
 
   useEffect(() => {
     const filteredByTheme = data
@@ -15,6 +15,12 @@ function Map() {
         <Marker
           position={[e.geolocalisation[0], e.geolocalisation[1]]}
           key={index}
+          // icon={L.icon({
+          //   iconUrl: "/public/location-red.png",
+          //   iconSize: [50, 50],
+          //   iconAnchor: [10, 10],
+          //   popupAnchor: [0, 0],
+          // })}
         >
           <Popup>
             <h5 className="popup-title text-xs font-bold tracking-widest mb-1 text-[#cd3030]">
@@ -40,7 +46,7 @@ function Map() {
       zoom={13}
       scrollWheelZoom={true}
       zoomControl={false}
-      style={{ width: '100%', height: '100vh' }}
+      style={{ width: "100%", height: "100vh" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -53,6 +59,12 @@ function Map() {
             <Marker
               position={[e.geolocalisation[0], e.geolocalisation[1]]}
               key={index}
+              icon={L.icon({
+                iconSize: [50, 50],
+                iconAnchor: [10, 10],
+                popupAnchor: [0, 0],
+                iconUrl: `/location-${e.color}.png`,
+              })}
             >
               <Popup>
                 <h5 className="popup-title text-xs font-bold tracking-widest mb-1 text-[#cd3030]">

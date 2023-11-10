@@ -16,20 +16,6 @@
   font-weight: normal;
 }
 
-aside li {
-  box-shadow: inset 0 0 0 0 #e5e6e6;
-  display: block;
-  padding: 0.2rem;
-  width: 100%;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-aside li:hover {
-  box-shadow: inset 100vmax 0 0 0 #e5e6e6;
-
-  transition: 0.3s;
-}
 
 /* Ajoutez ces règles CSS dans votre fichier CSS ou SCSS */
 @media screen and (max-width: 640px) {
