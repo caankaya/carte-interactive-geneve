@@ -95,7 +95,7 @@ function Sidebar2() {
         <h1
           className={`collapse-title font-bold text-[#cd3030] lg:text-lg uppercase text-left mb-2`}
         >
-          héritage raciste dans l’espace public de genève
+          <a href="/">héritage raciste dans l’espace public de genève</a>
         </h1>
 
         {/* Personnages Historiques */}
@@ -195,7 +195,7 @@ function Sidebar2() {
                     handleItemClick(index);
                   }}
                 >
-                  <button>{theme.theme_name}</button>
+                  <a href="#">{theme.theme_name}</a>
                 </li>
               ))}
             </>

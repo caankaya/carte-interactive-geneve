@@ -73,7 +73,7 @@ function Map() {
                 </h5>
                 <h3 className="popup-theme text-base font-bold">{e.theme}</h3>
                 <p className="popup-shorttext">
-                  {e.faits_historiques.substring(0, 500)}...
+                  {e.faits_historiques.substring(0, 200)}...
                 </p>
                 <button className="btn btn-sm normal-case block m-auto w-48 text-xs">
                   <Link to={`/page/${e.id}`} style={{ color: "black" }}>

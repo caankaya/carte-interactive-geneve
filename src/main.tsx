@@ -1,26 +1,24 @@
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Routes } from "react-router-dom";
 import App from "./components/App/App";
 import Layout from "./components/Layout/Layout";
 import store from "./redux/store";
 import Detail from "./components/Detail/Detail";
+import Admin from "./components/Admin/Admin";
+import React from "react";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />} errorElement={""}>
-      <Route errorElement={""}>
-        <Route index element={<App />} />
-        {/* Compléter le router avec d'autres pages à partir de là*/}
-        {/* Oubliez pas d'ajouter Outlet dans le composant Layout*/}
-        <Route path="/page/:id" element={<Detail />} />
+    <React.Fragment>
+      <Route>
+        <Route path="/" element={<Layout />} errorElement={""}>
+          <Route index element={<App />} />
+          <Route path="/page/:id" element={<Detail />} />
+        </Route>
       </Route>
-    </Route>
+      <Route path="/admin" element={<Admin />} />
+    </React.Fragment>
   )
 );
 
