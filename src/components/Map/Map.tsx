@@ -16,21 +16,17 @@ function Map() {
         <Marker
           position={[e.geolocalisation[0], e.geolocalisation[1]]}
           key={index}
-          icon={L.icon({
-            iconUrl: `/location-${e.color}.png`,
-            iconSize: [50, 50],
-            iconAnchor: [10, 10],
-            popupAnchor: [0, 0],
-          })}
+          // icon={L.icon({
+          //   iconUrl: `/location-${e.color}.png`,
+          //   iconSize: [50, 50],
+          //   iconAnchor: [10, 10],
+          //   popupAnchor: [0, 0],
+          // })}
         >
           <Popup>
-            <h5 className="popup-title text-xs font-bold tracking-widest mb-1 text-[#cd3030]">
-              {e.figure}
-            </h5>
+            <h5 className="popup-title text-xs font-bold tracking-widest mb-1 text-[#cd3030]">{e.figure}</h5>
             <h3 className="popup-theme text-base font-bold">{e.theme}</h3>
-            <p className="popup-shorttext">
-              {e.faits_historiques.substring(0, 500)}...
-            </p>
+            <p className="popup-shorttext">{e.faits_historiques.substring(0, 500)}...</p>
             <button className="btn btn-sm normal-case block m-auto w-48 text-xs">
               <Link to={`/page/${e.id}`}>Lire la suite</Link>
             </button>
@@ -60,21 +56,17 @@ function Map() {
             <Marker
               position={[e.geolocalisation[0], e.geolocalisation[1]]}
               key={index}
-              icon={L.icon({
-                iconSize: [50, 50],
-                iconAnchor: [10, 10],
-                popupAnchor: [0, 0],
-                iconUrl: `/location-${e.color}.png`,
-              })}
+              // icon={L.icon({
+              //   iconSize: [50, 50],
+              //   iconAnchor: [10, 10],
+              //   popupAnchor: [0, 0],
+              //   iconUrl: `/location-${e.color}.png`,
+              // })}
             >
               <Popup>
-                <h5 className="popup-title text-xs font-bold tracking-widest mb-1 text-[#cd3030]">
-                  {e.figure}
-                </h5>
+                <h5 className="popup-title text-xs font-bold tracking-widest mb-1 text-[#cd3030]">{e.figure}</h5>
                 <h3 className="popup-theme text-base font-bold">{e.theme}</h3>
-                <p className="popup-shorttext">
-                  {e.faits_historiques.substring(0, 200)}...
-                </p>
+                <p className="popup-shorttext">{e.faits_historiques.substring(0, 200)}...</p>
                 <button className="btn btn-sm normal-case block m-auto w-48 text-xs">
                   <Link to={`/page/${e.id}`} style={{ color: "black" }}>
                     Lire la suite
