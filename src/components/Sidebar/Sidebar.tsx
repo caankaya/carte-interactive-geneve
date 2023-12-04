@@ -123,6 +123,9 @@ function Sidebar2() {
                   key={index}
                   onClick={() => {
                     handleItemClick(index);
+                    if (screenSize < 640) {
+                      dispatch(toggleSidebar(false));
+                    }
                   }}
                 >
                   {personne}
@@ -159,6 +162,9 @@ function Sidebar2() {
                   key={index}
                   onClick={() => {
                     handleItemClick(index);
+                    if (screenSize < 640) {
+                      dispatch(toggleSidebar(false));
+                    }
                   }}
                 >
                   {event}
@@ -196,6 +202,9 @@ function Sidebar2() {
                   onClick={() => {
                     dispatch(getArticleId(theme.id));
                     handleItemClick(index);
+                    if (screenSize < 640) {
+                      dispatch(toggleSidebar(false));
+                    }
                   }}
                 >
                   {theme.theme_name}
@@ -207,7 +216,12 @@ function Sidebar2() {
         <section className="collapse rounded-none border-y-2 border-accent">
           <h2
             className="collapse-title font-bold first-letter:uppercase max-lg:text-sm text-secondary"
-            onClick={openModal}
+            onClick={() => {
+              openModal();
+              if (screenSize < 640) {
+                dispatch(toggleSidebar(false));
+              }
+            }}
           >
             à propos
             <FontAwesomeIcon icon={faAddressCard} style={{ marginLeft: "1rem" }} />
