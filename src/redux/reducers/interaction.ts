@@ -9,7 +9,7 @@ interface InteractionState {
 
 const initialState: InteractionState = {
   menuBurger: false,
-  sidebar: true,
+  sidebar: false,
   aboutModal: false,
   articleId: null,
 };
@@ -24,8 +24,8 @@ const interactionReducer = createReducer(initialState, (builder) => {
     .addCase(toggleMenuBurger, (state) => {
       state.menuBurger = !state.menuBurger;
     })
-    .addCase(toggleSidebar, (state) => {
-      state.sidebar = !state.sidebar;
+    .addCase(toggleSidebar, (state, action) => {
+      state.sidebar = action.payload;
     })
     .addCase(openAboutModal, (state) => {
       state.aboutModal = !state.aboutModal;

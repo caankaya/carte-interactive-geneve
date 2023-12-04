@@ -12,12 +12,14 @@ import logo from "/logo.png";
 function Sidebar2() {
   const dispatch = useAppDispatch();
   const sidebar = useAppSelector((state) => state.interaction.sidebar);
+  console.log("sidebar :", sidebar);
   const modal = useAppSelector((state) => state.interaction.aboutModal);
   const [isThemeOpen, setIsThemeOpen] = useState(false);
   const [isEventHistorielOpen, setIsEventHistorielOpen] = useState(false);
   const [isPersonOpen, setIsPersonOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
+  console.log("screenSize :", screenSize);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -59,7 +61,7 @@ function Sidebar2() {
           sidebar ? "ml-[263px]" : ""
         } ${sidebar ? "lg:ml-[400px]" : ""}`}
         onClick={() => {
-          dispatch(toggleSidebar(sidebar));
+          dispatch(toggleSidebar(!sidebar));
         }}
       >
         <span
