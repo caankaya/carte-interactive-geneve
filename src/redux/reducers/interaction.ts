@@ -1,32 +1,26 @@
-import { createAction, createReducer } from '@reduxjs/toolkit';
+import { createAction, createReducer } from "@reduxjs/toolkit";
 
 interface InteractionState {
-  test: [];
   menuBurger: boolean;
   sidebar: boolean;
   aboutModal: boolean;
-  themeId: number | null;
+  articleId: number | null;
 }
 
 const initialState: InteractionState = {
-  test: [],
   menuBurger: false,
-  sidebar: true,
+  sidebar: false,
   aboutModal: false,
-  themeId: null,
+  articleId: null,
 };
 
-export const test = createAction<[]>('interaction/test');
-export const toggleMenuBurger = createAction('Menu burger toggled');
-export const toggleSidebar = createAction<boolean>('Sidebar toggled');
-export const openAboutModal = createAction('About modal toggled');
-export const getThemeId = createAction<number>('Getting the theme id');
+export const toggleMenuBurger = createAction("Menu burger toggled");
+export const toggleSidebar = createAction<boolean>("Sidebar toggled");
+export const openAboutModal = createAction("About modal toggled");
+export const getArticleId = createAction<number>("Getting the theme id");
 
 const interactionReducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(test, (state, action) => {
-      state.test = action.payload;
-    })
     .addCase(toggleMenuBurger, (state) => {
       state.menuBurger = !state.menuBurger;
     })
@@ -36,8 +30,8 @@ const interactionReducer = createReducer(initialState, (builder) => {
     .addCase(openAboutModal, (state) => {
       state.aboutModal = !state.aboutModal;
     })
-    .addCase(getThemeId, (state, action) => {
-      state.themeId = action.payload;
+    .addCase(getArticleId, (state, action) => {
+      state.articleId = action.payload;
     });
 });
 

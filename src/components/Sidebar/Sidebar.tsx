@@ -1,7 +1,7 @@
 import { useState } from "react";
 import About from "../Modal/About";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { getThemeId, openAboutModal, toggleSidebar } from "../../redux/reducers/interaction";
+import { getArticleId, openAboutModal, toggleSidebar } from "../../redux/reducers/interaction";
 import { themes } from "../../data/themes";
 import { eventHistorial } from "../../data/event";
 import { personnes } from "../../data/personnes";
@@ -70,18 +70,25 @@ function Sidebar2() {
       </button>
       {/* Contenu de la barre latérale */}
       <aside
-        className={`min-h-full overflow-y-auto fixed top-0 left-0 lg:w-96 w-64 ${
-          !isPersonOpen ? "flex flex-col" : ""
-        } ${sidebar ? "lg:translate-x-0 duration-1000" : "-translate-x-full duration-1000"} bg-base-100`}
+        className={`min-h-full fixed top-0 left-0 lg:w-96 w-64 flex flex-col ${
+          sidebar ? "lg:translate-x-0 duration-1000" : "-translate-x-full duration-1000"
+        } bg-base-100`}
       >
         {/* Titre de l'application */}
         <h1 className={`collapse-title font-bold text-primary lg:text-lg uppercase text-left mb-2`}>
           <a href="/">héritage raciste dans l’espace public de genève</a>
         </h1>
+        {/* Contenu - Accueil */}
+        <section className="collapse border-y-2 rounded-none border-accent">
+          <a href="/" className="collapse-title font-bold max-sm:text-sm text-secondary">
+            Accueil
+            <FontAwesomeIcon icon={faHouse} style={{ marginLeft: "1rem" }} />
+          </a>
+        </section>
         {/* Contenu - Personnages Historiques */}
         <section
-          className={`collapse collapse-arrow max-h-[100px] rounded-none border-t-2 border-accent
-           ${isPersonOpen ? "max-h-screen transition-all duration-500 ease-in-out" : "max-h-0"}`}
+          className={`collapse collapse-arrow max-h-[100px] rounded-none border-accent
+           ${isPersonOpen ? "max-h-[40vh] transition-all duration-500 ease-in-out" : "max-h-0"}`}
         >
           {/* input cliquable pour ouvrir le menu déroulant vers le bas */}
           <input
@@ -101,7 +108,13 @@ function Sidebar2() {
           <div className="flex flex-col overflow-auto">
             {isPersonOpen &&
               personnes.map((personne, index) => (
-                <a className="m-2 pl-2 text-sm text-accent cursor-pointer" key={index}>
+                <a
+                  className={`m-2 pl-2 text-sm text-accent cursor-pointer ${activeIndex === index ? "active" : ""}`}
+                  key={index}
+                  onClick={() => {
+                    handleItemClick(index);
+                  }}
+                >
                   {personne}
                 </a>
               ))}
@@ -110,7 +123,7 @@ function Sidebar2() {
         {/* Contenu - Faits Historiques */}
         <section
           className={`collapse collapse-arrow max-h-[100px] overflow-hidden rounded-none border-y-2 border-accent ${
-            isEventHistorielOpen ? "max-h-screen transition-all duration-500 ease-in-out" : "max-h-0"
+            isEventHistorielOpen ? "max-h-screen transition-all duration-1000 ease-in-out" : "max-h-0"
           }`}
         >
           {/* input cliquable pour ouvrir le menu déroulant vers le bas */}
@@ -131,7 +144,13 @@ function Sidebar2() {
           <div className="flex flex-col">
             {isEventHistorielOpen &&
               eventHistorial.map((event, index) => (
-                <a className="m-2 pl-2 text-sm text-accent" key={index}>
+                <a
+                  className={`m-2 pl-2 text-sm text-accent cursor-pointer ${activeIndex === index ? "active" : ""}`}
+                  key={index}
+                  onClick={() => {
+                    handleItemClick(index);
+                  }}
+                >
                   {event}
                 </a>
               ))}
@@ -140,7 +159,7 @@ function Sidebar2() {
         {/* Contenu - Thèmes */}
         <section
           className={`collapse collapse-arrow max-h-[100px] overflow-hidden  ${
-            isThemeOpen ? "max-h-screen transition-all duration-500 ease-in-out" : "max-h-0"
+            isThemeOpen ? "max-h-screen transition-all duration-1000 ease-in-out" : "max-h-0"
           }`}
         >
           {/* input cliquable pour ouvrir le menu déroulant vers le bas */}
@@ -158,14 +177,14 @@ function Sidebar2() {
             <FontAwesomeIcon icon={faFlag} style={{ marginLeft: "1rem" }} />
           </h2>
           {/* La liste des thèmes */}
-          <div className="flex flex-col">
+          <div className="flex flex-col overflow-y">
             {isThemeOpen &&
               themes.map((theme, index) => (
                 <a
-                  className={`m-2 pl-2 text-sm text-accent ${activeIndex === index ? "active" : ""}`}
+                  className={`m-2 pl-2 text-sm text-accent cursor-pointer ${activeIndex === index ? "active" : ""}`}
                   key={index}
                   onClick={() => {
-                    dispatch(getThemeId(theme.id));
+                    dispatch(getArticleId(theme.id));
                     handleItemClick(index);
                   }}
                 >
@@ -174,15 +193,8 @@ function Sidebar2() {
               ))}
           </div>
         </section>
-        {/* Contenu - Accueil */}
-        <section className="collapse border-y-2 rounded-none border-accent">
-          <a href="/" className="collapse-title font-bold text-sm text-secondary">
-            Accueil
-            <FontAwesomeIcon icon={faHouse} style={{ marginLeft: "1rem" }} />
-          </a>
-        </section>
         {/* Contenu - About */}
-        <section className="collapse rounded-none border-b-2 border-accent">
+        <section className="collapse rounded-none border-y-2 border-accent">
           <h2
             className="collapse-title font-bold first-letter:uppercase max-lg:text-sm text-secondary"
             onClick={openModal}
@@ -192,7 +204,7 @@ function Sidebar2() {
           </h2>
         </section>
         {/* Logo de la ville de Gèneve */}
-        <img src={logo} alt="Logo de la ville de Genève" className="w-1/2 mt-auto ml-auto mr-2 mb-2" />
+        <img src={logo} alt="Logo de la ville de Genève" className="w-1/2 mt-auto ml-auto" />
       </aside>
       {/* Popup modal pour la page à propos */}
       <About sidebar={sidebar} isOpen={modal} />
