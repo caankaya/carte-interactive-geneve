@@ -9,7 +9,7 @@ interface InteractionState {
 
 const initialState: InteractionState = {
   menuBurger: false,
-  sidebar: false,
+  sidebar: true,
   aboutModal: false,
   articleId: null,
 };

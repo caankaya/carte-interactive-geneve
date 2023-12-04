@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import About from "../Modal/About";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { getArticleId, openAboutModal, toggleSidebar } from "../../redux/reducers/interaction";
@@ -17,6 +17,16 @@ function Sidebar2() {
   const [isEventHistorielOpen, setIsEventHistorielOpen] = useState(false);
   const [isPersonOpen, setIsPersonOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [screenSize, setScreenSize] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    if (screenSize < 640) {
+      dispatch(toggleSidebar(false));
+    }
+    return () => window.removeEventListener("resize", handleResize);
+  }, [dispatch, screenSize]);
 
   const handleItemClick = (index: number | null) => {
     setActiveIndex(index);
