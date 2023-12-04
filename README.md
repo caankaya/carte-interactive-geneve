@@ -1,27 +1,35 @@
-# React + TypeScript + Vite
+# HÉRITAGE RACISTE DANS L'ESPACE PUBLIC DE GENÈVE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description du Projet
 
-Currently, two official plugins are available:
+Bienvenue dans le projet "Héritage Raciste dans l'Espace Public de Genève". Cette application interactive de cartographie a été développée en utilisant React avec TypeScript du côté frontend, accompagné de la bibliothèque Leaflet pour la cartographie. Le backend est construit en PHP, avec une base de données MySQL pour stocker les informations nécessaires.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+L'objectif de cette application est de présenter de manière interactive les faits et les personnages historiques liés au passé de Genève, mettant en lumière l'héritage raciste dans l'espace public. Les utilisateurs ont la possibilité de localiser ces éléments tant dans la ville que dans le Musée d'ethnographie (MEG) de Genève, grâce à une carte interactive.
 
-## Expanding the ESLint configuration
+## Fonctionnalités Principales
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Carte Interactive :** Explorez la ville de Genève et le MEG à travers une carte interactive qui met en évidence les lieux liés à l'héritage raciste.
 
-- Configure the top-level `parserOptions` property like this:
+2. **Localisation Précise :** Les utilisateurs peuvent localiser des faits historiques spécifiques et des personnages dans la ville et au sein du MEG pour une expérience immersive.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+3. **Projet sur Station Tactile :** L'application sera projetée sur une station tactile dans l'espace central de la prochaine exposition temporaire du Musée d'ethnographie de Genève (MEG).
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Technologies Utilisées
+
+- Frontend : React, TypeScript
+- Cartographie : Leaflet
+- Backend : PHP
+- Base de données : MySQL
+
+## Contributeurs
+
+- [@canoral](https://github.com/canoral)
+- Grégoire de CEUNINCK
+
+## Licence
+
+Ce projet est sous licence [MIT](LICENSE).
+
+---
+
+N'hésitez pas à contribuer, signaler des problèmes ou proposer des améliorations. Merci de participer à la sensibilisation autour de l'héritage raciste dans l'espace public de Genève.
